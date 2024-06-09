@@ -22,6 +22,20 @@ app.post('/api/car',(req,res)=>{
     console.log(brand);
     res.send("car sucessfuly submite")
 })
+
+// CONNCET EXPRESS SEREVER TO DATABASE
+let mongoose=require('mongoose')
+mongoose.connect('mongodb://127.0.0.1:27017/mydata').then(()=>{
+    console.log("database easily create");
+
+}).catch(()=>{
+    console.log("database connection some error");
+
+})
+
+
+
+
 app.listen(4000, () => {
   console.log("sever run easily without any problem");
 });
