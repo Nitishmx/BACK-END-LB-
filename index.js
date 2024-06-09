@@ -24,14 +24,14 @@ app.post('/api/car',(req,res)=>{
 })
 
 // CONNCET EXPRESS SEREVER TO DATABASE
-let mongoose=require('mongoose')
-mongoose.connect('mongodb://127.0.0.1:27017/mydata').then(()=>{
-    console.log("database easily create");
+// let mongoose=require('mongoose')
+// mongoose.connect('mongodb://127.0.0.1:27017/mydata').then(()=>{
+//     console.log("database easily create");
 
-}).catch(()=>{
-    console.log("database connection some error");
+// }).catch(()=>{
+//     console.log("database connection some error");
 
-})
+// })
 
 
 
