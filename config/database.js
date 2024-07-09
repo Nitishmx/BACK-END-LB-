@@ -1,10 +1,10 @@
 let mongoose=require('mongoose')
-require("dotevn").config()//ish statement ke env file ke inner wala total code process.env.databaseurl me load ho jayega
+// require("dotevn").config()//ish statement ke env file ke inner wala total code process.env.databaseurl me load ho jayega
 function dataconnection(){
-    mongoose.connect(process.env.DATABASE_URL,{
-        useNewUrlParser:true,
-        useUnifiedTopology:true
-    }) //process.env.DATABASE_URL(.env wala data load ho jayega process ke inner)
+    mongoose.connect("mongodb://127.0.0.1:27017/createdata"
+        // useNewUrlParser:true,
+        // useUnifiedTopology:true
+    ) //process.env.DATABASE_URL(.env wala data load ho jayega process ke inner)
     .then(()=>{
         console.log("database connect seprately");
     }).catch(()=>{
